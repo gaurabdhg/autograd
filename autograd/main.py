@@ -39,8 +39,6 @@ class Tensor:
             self.zeroGrad()
 
 
-
-
     def zeroGrad(self):
         self.grad = Tensor(np.zeros_like(self.data, dtype=np.float64))
     
