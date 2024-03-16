@@ -1,5 +1,5 @@
 from typing import List, NamedTuple, Union, Callable, Optional
-import numpy as np
+import jax.numpy as np
 from vectorops import tensorSum,_add,_sub,_mul,_neg
 from matops import _matmul,_slice
 
@@ -16,8 +16,7 @@ typeTensor = Union["Tensor", float, np.ndarray]
 def assertArray(arrayType):
     if isinstance(arrayType, np.ndarray):
         return arrayType
-    else:
-        return np.array(arrayType)
+    return np.array(arrayType)
 
 
 def assertTensor(tensorType):
